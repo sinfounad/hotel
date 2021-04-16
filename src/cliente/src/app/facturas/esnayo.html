@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<img src="imagenes/fondoT.jpg" width="100%" height="900px" style="position:absolute;">
+<div class="mueble">
+<div class="vidrio"></div>
+<div class="contenedor">
+
+<div class="estant">
+<img src="imagenes/barras2.jpg" width="100%" height="40px" style="margin-top:50px">
+       
+</div>
+
+<div class="Paquetes">
+<div class="Producto">
+<img src="imagenes/DTT.png" width="150px" height="140px" style="margin-top:50px" onclick="myFunction()"> 
+</div>
+
+<div class="Producto1" id="myDIV">
+
+</div>
+<div class="Producto">
+<img src="imagenes/Dori.png" width="180px" height="140px" style="margin-top:50px" onclick="myFunction2()">  
+</div>
+<div class="Producto2" id="myDIV2">
+
+</div>
+<div class="Producto">
+<img src="imagenes/popetas.png" width="120px" height="140px" style="margin-top:50px" onclick="myFunction3()"> 
+</div>
+
+<div class="Producto3" id="myDIV3">
+
+</div>
+
+</div>
+
+
+<div class="Paquetes">
+<div class="Producto">
+<img src="imagenes/DTT.png" width="150px" height="140px" style="margin-top:50px" onclick="myFunction()"> 
+</div>
+
+<div class="Producto1" id="myDIV">
+
+</div>
+<div class="Producto">
+<img src="imagenes/Dori.png" width="180px" height="140px" style="margin-top:50px" onclick="myFunction2()">  
+</div>
+<div class="Producto2" id="myDIV2">
+
+</div>
+<div class="Producto">
+<img src="imagenes/popetas.png" width="120px" height="140px" style="margin-top:50px" onclick="myFunction3()"> 
+</div>
+
+<div class="Producto3" id="myDIV3">
+
+</div>
+
+</div>
+<div class="estant">
+<img src="imagenes/barras2.jpg" width="100%" height="40px" style="margin-top:50px">       
+</div>
+<div class="estant">
+<img src="imagenes/barras2.jpg" width="100%" height="40px" style="margin-top:50px">   
+</div>
+
+</div>
+
+
+
+</div>
+<div><h1>Hola</h1></div>
+<p>Click the button to create a P element with some text.</p>
+
+<button onclick="myFunction()">Try it</button>
+<script>
+var contador=0
+function myFunction() {
+
+  
+  contador=contador+1;
+  var para = document.createElement("DIV");
+  para.innerHTML = '<img src="imagenes/DTT.png" width="150px" height="140px" style="margin-top:50px">'+contador;
+  para.style="position:absolute;"
+  document.getElementById("myDIV").appendChild(para);
+  myMove();
+}
+
+
+function myMove() {
+  var elem = document.getElementById("myDIV");   
+  var pos = 0;
+ // setInterval(document.getElementById("myDIV").style.transform = "rotate(20deg)", 3);
+ document.getElementById("myDIV").style.top="0px";
+ 
+ document.getElementById("myDIV").animate([
+
+  // keyframes
+  { transform: 'rotate(0deg)' }, 
+  { transform: 'rotate(-20deg)' },
+  { transform: 'rotate(10deg)' }, 
+  { transform: 'rotate(20deg)' },
+  { transform: 'translateY(0px)' }, 
+  { transform: 'translateY(300px)' },
+
+  
+ 
+    ], { 
+  // timing options
+  duration: 1000,
+  iterations: 1
+   });
+  
+  setTimeout(posicion, 1000);
+  function posicion(){
+    
+    document.getElementById("myDIV").style.top="300px";
+
+  }
+
+  
+}
+
+
+function myFunction2() {
+
+  
+
+var para = document.createElement("DIV");
+para.innerHTML = '<img src="imagenes/Dori.png" width="180px" height="140px" style="margin-top:50px">';
+para.style="position:absolute;"
+document.getElementById("myDIV2").appendChild(para);
+myMove2();
+}
+
+
+
+function myMove2() {
+var elem = document.getElementById("myDIV2");   
+var pos = 0;
+// setInterval(document.getElementById("myDIV").style.transform = "rotate(20deg)", 3);
+document.getElementById("myDIV2").style.top="0px";
+document.getElementById("myDIV2").animate([
+
+// keyframes
+
+
+{ transform: 'rotate(0deg)' }, 
+{ transform: 'rotate(-20deg)' },
+{ transform: 'rotate(10deg)' }, 
+{ transform: 'rotate(20deg)' },
+{ transform: 'translateY(0px)' }, 
+{ transform: 'translateY(300px)' },
+
+
+
+  ], { 
+// timing options
+duration: 1000,
+iterations: 1
+ });
+
+setTimeout(posicion1, 1000);
+function posicion1(){
+  
+  document.getElementById("myDIV2").style.top="300px";
+
+}
+
+
+}
+
+function myFunction3() {
+
+  
+console.log("entra");
+var para = document.createElement("DIV");
+para.innerHTML = '<img src="imagenes/popetas.png" width="120px" height="140px" style="margin-top:50px">';
+para.style="position:absolute;"
+document.getElementById("myDIV3").appendChild(para);
+myMove3();
+}
+
+
+function myMove3() {
+var elem = document.getElementById("myDIV3");   
+var pos = 0;
+// setInterval(document.getElementById("myDIV").style.transform = "rotate(20deg)", 3);
+document.getElementById("myDIV3").style.top="0px";
+document.getElementById("myDIV3").animate([
+
+// keyframes
+
+
+{ transform: 'rotate(0deg)' }, 
+{ transform: 'rotate(-20deg)' },
+{ transform: 'rotate(10deg)' }, 
+{ transform: 'rotate(20deg)' },
+{ transform: 'translateY(0px)' }, 
+{ transform: 'translateY(300px)' },
+
+
+
+  ], { 
+// timing options
+duration: 1000,
+iterations: 1
+ });
+
+setTimeout(posicion3, 1000);
+function posicion3(){
+  
+  document.getElementById("myDIV3").style.top="300px";
+
+}
+
+
+}
+</script>
+
+</body>
+</html>

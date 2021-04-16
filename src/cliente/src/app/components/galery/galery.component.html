@@ -1,0 +1,48 @@
+<div class="contenedorMayor">
+
+    <div class="flex-container">
+        <div class="flex-filas">
+
+            <div class="padreImagen"><div class="foto"><img src= "../../../assets/Imagenes/h1.jpg" width="100%" height="350px"><div class="boton"><button><a routerLink="/factura">Reservar</a></button></div></div></div>
+            <div class="padreImagen"><div class="foto"><img src= "../../../assets/Imagenes/h2.jpg" width="100%" height="350px"><div class="boton"><button><a routerLink="/factura">Reservar</a></button></div></div></div>
+            <div class="padreImagen"><div class="foto"><img src= "../../../assets/Imagenes/h3.jpg" width="100%" height="350px"><div class="boton"><button><a routerLink="/factura">Reservar</a></button></div></div></div>
+        </div>
+
+        <div class="flex-filas">
+            <div class="padreImagen"><div class="foto"><img src= "../../../assets/Imagenes/h4.jpg" width="100%" height="350px"><div class="boton"><button><a routerLink="/factura">Reservar</a></button></div></div></div>
+            <div class="padreImagen"><div class="foto"><img src= "../../../assets/Imagenes/h5.jpg" width="100%" height="350px"><div class="boton"><button><a routerLink="/factura">Reservar</a></button></div></div></div>
+            <div class="padreImagen"><div class="foto"><img src= "../../../assets/Imagenes/h7.jpg" width="100%" height="350px"><div class="boton"><button><a routerLink="/factura">Reservar</a></button></div></div></div>
+            
+
+            
+        </div>
+        <div class="flex-filas">
+            <div class="padreImagen"><div class="foto"><img src= "../../../assets/Imagenes/h8.jpg" width="100%" height="350px"><div class="boton"><button><a routerLink="/factura">Reservar</a></button></div></div></div>
+            <div class="padreImagen"><div class="foto"><img src= "../../../assets/Imagenes/h9.jpg" width="100%" height="350px"><div class="boton"><button><a routerLink="/factura">Reservar</a></button></div></div></div>
+            <div class="padreImagen"><div class="foto"><img src= "../../../assets/Imagenes/h10.jpg" width="100%" height="350px"><div class="boton"><button><a routerLink="/factura">Reservar</a></button></div></div></div>
+           
+
+
+        </div> 
+        <a routerLink="/task">Task</a>
+         
+       
+      
+
+      
+      
+      <a><button (click)="show = !show">{{show ? 'hide' : 'show'}}</button> </a>
+        
+      show = {{show}}  
+      <br>  
+      <div *ngIf="show; else elseBlock">Text to show</div>  
+      <div *ngIf="show; else elseBlock">Text to show</div>
+      <ng-template #elseBlock>ggvcs </ng-template> 
+      <a>ir</a>
+    </div>
+   
+      
+
+
+
+</div>

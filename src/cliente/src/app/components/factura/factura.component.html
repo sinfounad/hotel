@@ -1,0 +1,59 @@
+<div class="Factura">
+
+  <div Class="Membrete">
+    <span><h3>Factura de reserva hotel Tijuana</h3>
+      Direccion: Avenida Revolucion 34-19</span>
+    <span class=logoFact>
+
+      <img src= "../../../assets/Imagenes/logoHotel1.png" width="120px" height="100px">
+    </span>
+  </div>
+  
+  <form (submit)="createTask($event)">
+    <div class="input-group-addon">
+     
+        <label class="Dlabel" >Nombre</label>
+        <label class="Dlabel">Documento</label>
+        <label class="Dlabel">Direccion</label>
+        <input type="text" class="Dinput" name="Nombre" [(ngModel)]="Nombre">
+        <input type="text" class="Dinput" name="Documento" [(ngModel)]="Documento">
+        <input type="text" class="Dinput " name="Nombre" [(ngModel)]="Direccion">
+      
+        <label class="Dlabel" >Correo</label>
+        <label class="Dlabel">Telefono</label>
+        <label class="Dlabel">Habitacion</label>
+        <input type="text" class="Dinput" name="Correo" [(ngModel)]="Correo">
+        
+        <input type="text" class="Dinput " name="Habitacion" [(ngModel)]="Habitacion">
+        
+        <label class="Dlabel">Entrada</label>
+        <label class="Dlabel">Salida</label><br>
+      
+        <div class="Cpicker">
+          <input matInput [matDatepicker]="picker1" style="display: inline; " class="Pinput" name="Entrada" [(ngModel)]="Entrada">
+        
+           <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      
+      
+        </div>
+        <div class="Cpicker">
+      
+          <input matInput [matDatepicker]="picker" style="display: inline; " class="Pinput" name="Salida" [(ngModel)]="Salida">
+        
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      
+      
+        </div>
+       
+         <mat-datepicker #picker></mat-datepicker>
+         <mat-datepicker #picker1></mat-datepicker>
+        
+        
+      <span>
+        <button type="submit" class="btn btn-primary" click= "createTask()">Generar Factura</button>
+        
+      </span>
+    </div>
+    </form>
+    <button click= "Salir()">Salir</button>
+    </div>

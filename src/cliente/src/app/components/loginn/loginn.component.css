@@ -1,0 +1,64 @@
+.padre{
+    width: 100%;
+    background-color:transparent;
+    display:flex;
+    flex-direction:row;
+    padding-top:130px;
+    padding-bottom:100px;
+
+}
+
+
+h1{
+
+    font-size: 20px;
+    font-family: Reliva;
+   
+    color: slategrey;
+   
+   }
+
+
+ strong{
+    font-size: 20px;
+    font-family: Reliva;
+    width:80%;
+    color: slategrey;
+
+
+ }
+.padre > div{
+
+    width: 33%;
+
+
+}
+.Dform{
+
+ text-align: center;
+ background-color: black;
+ padding:30px;
+ padding-left:3%;
+ border-width:7px;
+ border-radius: 12px;
+ border-top-color: #CC0000;
+ border-right-color: blue;
+ border-bottom-color: #00FF00;
+ border-left-color: #CCC;
+
+ 
+ 
+
+
+}
+
+.line{
+    width: 95%;
+    border-width:7px;
+    border-color: royalblue;
+}
+
+button{
+    border-color: royalblue;
+
+}

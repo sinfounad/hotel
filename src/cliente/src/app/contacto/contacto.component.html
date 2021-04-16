@@ -1,0 +1,31 @@
+  <div class="Padre">
+ 
+   <h1>Ponte en contacto con nosotros</h1>
+  <div class="hijo">
+    <span class=logoFact>
+
+      <img src= "../../../assets/Imagenes/logoHotel1.png" width="120px" height="100px">
+    </span>
+
+    <form (submit)="enviarMensaje($event, valido)">
+    <input type="text" class="Dinput" name="Nombre" [(ngModel)]="Nombre"><br>
+    <input type="text" class="Dinput" name="Email" [(ngModel)]="Email"><br>
+    <textarea  name="Mensaje" [(ngModel)]="Mensaje">Hola</textarea>
+    <br>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+   <span *ngIf="!valido" style="background-color: blanchedalmond;">
+    Ingresa una Direccion de correo valida!
+  </span>
+  </form>
+  
+
+  </div>
+ 
+
+</div>
+
+
+  
+
+

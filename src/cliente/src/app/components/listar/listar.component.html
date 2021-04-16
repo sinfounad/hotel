@@ -1,0 +1,47 @@
+<p>listar works!</p>
+<table class="table">
+    <thead>
+    
+    <tr>
+    <th>Status</th>
+    <th>Title</th>
+    <th>Operation</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor= "let fact of facts">
+      <td>
+     
+      <input type="checkbox" [checked]="fact.isDone" (click)="updateTask(task)">
+      </td>
+    
+    <td>
+     
+        {{fact._id}}
+    </td>
+    <td>
+        {{fact._id}}
+    </td>
+    <td>
+      <button class="btn btn-danger"  (click)="deleteTask(task)">
+        Delete
+      </button>
+    </td>
+    <td>
+        <button class="btn btn-primary"  (click)="deleteTask(task)">
+          Actualizar
+        </button>
+      </td>
+    
+    
+    </tr>
+    <button class="btn btn-danger"  (click)="getFact()">mostrar</button> >
+    <button class="btn btn-danger"  (click)="Salir()">Salir</button> >
+      
+    
+    emmmemem
+    </tbody>
+    
+    
+    
+     </table>

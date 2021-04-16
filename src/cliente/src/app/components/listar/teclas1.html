@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        .tam{
+        
+            width:30px;
+            height:30px;
+        }
+        
+        
+        .content {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            background-color: cornflowerblue;
+            overflow: auto;
+          
+            
+          }
+
+          .chat {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            background-color: rgb(237, 200, 100);
+            overflow: auto;
+          
+            
+          }
+
+
+          .Hola{
+
+              background-color: darkblue;
+              color:white;
+              width:70px;
+          }
+
+          div {
+          
+            border-width:3px;
+            border: 4px solid #ccc;
+            background-color: #CC0000;
+            border-top-color: #CC0000;
+            border-right-color: blue;
+            border-bottom-color: #00FF00;
+            border-left-color: #CCC;
+          }
+        </style>
+        
+        
+        
+            <div>aggskskm</div>
+           
+           <div class="content">
+            <div contenteditable="" class="chat" name="" id="as" cols="30" rows="10"></div>
+            </div>
+           
+        
+        
+      
+        <img src="em.png" class="tam" onclick="emo('1')">
+        <img src="correcto.png" class="tam" onclick="emo('2')">
+        <img src="smile.webp" class="tam" onclick="emo('3')">
+        <img src="llorar.jpg" class="tam" onclick="emo('4')">
+        <h3 class="Hola" onclick="emo('5')">Hola</h3>
+        <textarea id="textDemo"></textarea>
+
+        
+        
+        
+        
+        <script type="text/javascript">
+            var a='';
+            var b;
+            /*
+            function pulsar(e) {
+              if (e.keyCode==8) {
+                  alert("Pulsaste Borrar");
+              } // avPag
+              if (e.keyCode==16) {
+                alert("pulsaste enter");
+        
+              } // rePag  
+              document.getElementById("demo").innerHTML = "Hello World!";
+            }*/
+              
+              function emo(valor){
+            
+             if(valor=="1"){
+                a='<img src="em.png" class="tam">';
+        
+            }
+            if(valor=="2"){
+                a='<img src="correcto.png" class="tam">';
+        
+            }
+        
+            if(valor=="3"){
+                a='<img src="smile.webp" class="tam">';
+        
+            }
+        
+            if(valor=="4"){
+        
+        
+             
+                a='<img src="llorar.jpg" class="tam">';
+        
+             }
+
+
+             if(valor=="5"){
+        
+        
+             
+               a='<h2 class="Hola"><span>Hola</span></h2>';
+
+            }
+
+             b=document.getElementById("as").innerHTML+a;
+             //alert(b);
+             document.getElementById("as").innerHTML=b
+            }
+
+            document.getElementById("textDemo").innerHTML="siiiii"
+
+
+            function who() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('🤡');
+    }, 2000);
+  });
+}
+
+function what() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('lurks');
+    }, 3000);
+  });
+}
+
+function where() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('in the shadows');
+    }, 5000);
+  });
+}
+
+async function msg() {
+  const a = await who();
+  const b = await what();
+  const c = await where();
+
+  console.log(`${ a } ${ b } ${ c }`);
+}
+
+
+msg();
+        
+            </script>
+
+
+
+    
+</body>
+</html>
+
+
+
+
+ 

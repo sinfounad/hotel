@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>dress</h1>
+  
+    <!-- File input field -->
+
+<form action="/files" method="POST" enctype="multipart/form-data">
+<input type="file" id="file" name="avatar" onchange="return fileValidation()"/>
+
+<input type="submit">
+<h3>Elige un archivo</h3>
+<!-- Image preview -->
+<div id="imagePreview"></div>
+</form>
+
+<script>
+
+
+
+ 
+
+
+function fileValidation(){
+    var fileInput = document.getElementById('file');
+    var filePath = fileInput.value;
+    console.log(filePath);
+    var allowedExtensions = /(.jpg|.jpeg|.png|.gif|.pdf)$/i;
+    var valida = allowedExtensions.exec(filePath);
+    if(!allowedExtensions.exec(filePath)){
+        alert('Please upload file having extensions .jpeg/.jpg/.png/.gif only.');
+        fileInput.value = '';
+        return false;
+    }else{
+
+        console.log(allowedExtensions.exec(filePath)+"este es el point");
+        //Image preview
+        if (fileInput.files && fileInput.files[0]) {
+               console.log(fileInput.files[0])
+               console.log(fileInput.files[1])
+                 if(valida==".jpg,.jpg"){
+
+                    alert("es un JPG "+"/"+ valida )
+                 }
+                 if(valida==".png,.png"){
+
+                 alert("es un png "+"/"+ valida )
+                 }
+            
+            
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('imagePreview').innerHTML = '<img src="'+e.target.result+'"/>';
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+}
+</script>
+</body>
+</html>

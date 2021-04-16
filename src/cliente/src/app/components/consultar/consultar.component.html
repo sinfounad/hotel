@@ -1,0 +1,144 @@
++
+
+<div class="titulo"><h1>Listado Facturas Mes de Agosto</h1></div> <br>
+
+
+   
+<div class="Title">
+ <div class="TituloTabla">Nombre </div>
+ <div class="TituloTabla">Documento</div>
+ <div class="TituloTabla">Correo</div>
+ <div class="TituloTabla">Direccion</div>
+ <div class="TituloTabla">Habitacion</div>
+ <div class="TituloTabla">Entrada</div>
+ <div class="TituloTabla">Salida</div>
+ <div class="TituloTabla">Salida</div>
+
+</div>
+
+
+    
+   
+
+
+   <div class="padre">
+    <div class="hijo" id="hijo" >
+
+      
+      <div *ngFor= "let fact of facts">
+        <div class="Title">
+          <div class="EncabezadoTabla">{{fact.nombre}}</div>
+          <div class="EncabezadoTabla"> {{fact.documento}}</div>
+          <div class="EncabezadoTabla">{{fact.correo}}</div>
+          <div class="EncabezadoTabla"> {{fact.direccion}}</div>
+          
+          <div class="EncabezadoTabla"> {{fact.entrada}}</div>
+          <div class="EncabezadoTabla"> {{fact.salida}}</div>
+          <div class="EncabezadoTabla">    <button class="btn btn-danger"  (click)="deleteFact(fact)">
+            Delete
+          </button></div>
+          <div class="EncabezadoTabla">  <button class="btn btn-dark"  (click)="show = !show;  getFactura(fact)">
+            Actualizar
+          </button> </div>
+         </div>
+  
+         
+      </div>
+ 
+
+      
+
+      
+    </div>
+  
+     <span>{{c}}</span>
+
+     <div>
+      
+
+     <div *ngIf="mostrar" class="contUpdate" >
+       <div>
+       <form (submit)="updateFact($event, c, factura)">
+        <div class="grid grid-pad">
+
+          
+          <div *ngIf="factura" class="col-1-4">
+            <div class="module hero">
+              <h4>Hola</h4>
+             
+              
+               
+               
+               <label>Nombre</label>
+               <label>Documento</label>
+               <label>Correo</label>
+               <label>Direccion</label>
+               <label>Salida</label>
+              
+               <input [(ngModel)]="factura.nombre" [ngModelOptions]="{standalone: true}"  name="Documento" />
+             
+               <input [(ngModel)]="factura.documento" [ngModelOptions]="{standalone: true}"  name="Documento" />
+               
+               <input [(ngModel)]="factura.correo" [ngModelOptions]="{standalone: true}"  name="Documento" />
+           
+               <input [(ngModel)]="factura.direccion" [ngModelOptions]="{standalone: true}"  name="Documento" />
+             
+               
+               
+               <input [(ngModel)]="factura.salida" [ngModelOptions]="{standalone: true}"  name="Documento" />
+               <input [(ngModel)]="factura.entrada" [ngModelOptions]="{standalone: true}"  name="Documento" />
+               <div class="Cpicker">
+                
+            
+                <input matInput [matDatepicker]="picker" style="display: inline; " class="Pinput" name="Salida" [(ngModel)]="Salida">
+              
+                <mat-datepicker-toggle matSuffix [for]="picker" style="background-color: aliceblue;"></mat-datepicker-toggle>
+            
+              </div>
+              <mat-datepicker #picker></mat-datepicker>
+            </div>
+          </div>
+        </div>
+      
+       
+       
+      
+       <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+
+      
+   </div>
+
+   <div class="Cpicker">
+            
+    <input matInput [matDatepicker]="picker" style="display: inline; " class="Pinput" name="Salida" [(ngModel)]="Salida">
+  
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+
+  </div>
+  <mat-datepicker #picker></mat-datepicker>
+   </div>
+  </div>
+   
+
+      
+
+     
+    
+   
+    
+   
+
+    
+
+    
+
+  
+    <br>
+    <button class="btn btn-danger"  (click)="getFact()">mostrar</button> 
+   
+      
+    
+ 
+

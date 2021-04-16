@@ -1,0 +1,82 @@
+<p class="display-1">tasks workhhs!</p>
+<div class="alert alert-dark">
+        <strong>Dark!</strong> Dark grey alert.
+</div>
+<div class="container">
+    <h2>Navigation Tabs</h2>
+    <p>Turn the nav menu into navigation tabs with the .nav nav-tabs class. Add the active class to the active/current link. If you want the tabs to be togglable, see the last example on the tutorial page.</p>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+<div class="text-dark">lop</div>
+
+  <div class="card">
+  <div class="card-body">
+   <form (submit)="addTask($event)">
+     <div class="input-group-addon">
+       <input type="text" name="title"  [(ngModel)]="title" placeholder="Add Task" class="form-control">
+       <span>
+        <button type="submit" class="btn btn-primary" click= "getTask()">MostrarLista</button>
+       
+       </span>
+     </div>
+      
+    
+      </form>
+
+
+  </div>
+
+</div>
+ <table class="table">
+<thead>
+
+<tr>
+<th>Status</th>
+<th>Title</th>
+<th>Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor= "let task of tasks">
+  <td>
+ 
+  <input type="checkbox" [checked]="task.isDone" (click)="updateTask(task)">
+  </td>
+
+<td>
+ 
+  {{task._id}}
+</td>
+<td>
+  {{task.Nombre}}
+</td>
+<td>
+  <button class="btn btn-danger"  (click)="deleteTask(task)">
+    Delete
+  </button>
+</td>
+
+
+</tr>
+<button class="btn btn-danger"  (click)="getHeroes()">mostrar</button> >
+  
+
+emmmemem
+</tbody>
+
+
+
+ </table>
